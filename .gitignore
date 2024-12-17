@@ -1,0 +1,11 @@
+# Ignore all files and directories
+*
+
+# Except README.md and manifest.xml
+!README.md
+!manifest.xml
+!.gitignore
+
+# Except the src directory
+!src/
+!images/
