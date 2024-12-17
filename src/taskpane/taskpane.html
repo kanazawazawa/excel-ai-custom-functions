@@ -1,0 +1,96 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
+<!-- This file shows how to design a first-run page that provides a welcome screen to the user about the features of the add-in. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contoso Task Pane Add-in</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"/>
+
+    <!-- Template styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="ms-font-m ms-welcome ms-Fabric">
+    <header class="ms-welcome__header ms-bgColor-neutralLighter">
+        <img width="90" height="90" src="../../assets/logo-filled.png" alt="Contoso" title="Contoso" />
+        <h1 class="ms-font-su">Welcome</h1>
+    </header>
+    <section id="sideload-msg" class="ms-welcome__main">
+        <h2 class="ms-font-xl">Please <a target="_blank" href="https://learn.microsoft.com/office/dev/add-ins/testing/test-debug-office-add-ins#sideload-an-office-add-in-for-testing">sideload</a> your add-in to see app body.</h2>
+    </section>
+    <section class="ms-welcome__main">
+        <p>This application is for demonstration purposes only.<br>
+            Please refrain from using it in a production environment.<br>
+            Use at your own risk.</p>
+        <p>Please be careful with the management of API Keys.<br>
+        To prevent excessive control, use endpoints with rate limits.<br>
+        After use, consider disabling the API Key.</p>
+    </section>
+    <main id="app-body" class="ms-welcome__main" style="display: none;">
+
+        <div class="form-item">
+            <label for="endpoint">endpoint:</label>
+            <input type="text" id="endpoint" name="endpoint" placeholder="https://YOUR_RESOURCE_NAME.openai.azure.com/">
+        </div>
+        <div class="form-item">
+            <label for="apiversion">apiversion:</label>
+            <input type="text" id="apiversion" name="apiversion" value="2024-05-01-preview" placeholder="2024-05-01-preview">
+        </div>
+        <div class="form-item">
+            <label for="model">model:</label>
+            <input type="text" id="model" name="model" value="4o" placeholder="YOUR_DEPLOYMENT_NAME">
+        </div>
+        <div class="form-item">
+            <label for="apikey">apikey:</label>
+            <input type="password" id="apikey" name="apikey">
+        </div>
+
+        
+        <script>
+            function updateVariables() {
+              window.endpoint = document.getElementById('endpoint').value;
+              window.apiversion = document.getElementById('apiversion').value;
+              window.deployment = document.getElementById('model').value;
+              window.apikey = document.getElementById('apikey').value;
+            }
+          
+            setInterval(updateVariables, 1000); // 1秒ごとに変数を更新
+          </script>
+        
+        <!--
+        <h2 class="ms-font-xl"> Discover what Office Add-ins can do for you today! </h2>
+        <ul class="ms-List ms-welcome__features">
+            <li class="ms-ListItem">
+                <i class="ms-Icon ms-Icon--Ribbon ms-font-xl"></i>
+                <span class="ms-font-m">Achieve more with Office integration</span>
+            </li>
+            <li class="ms-ListItem">
+                <i class="ms-Icon ms-Icon--Unlock ms-font-xl"></i>
+                <span class="ms-font-m">Unlock features and functionality</span>
+            </li>
+            <li class="ms-ListItem">
+                <i class="ms-Icon ms-Icon--Design ms-font-xl"></i>
+                <span class="ms-font-m">Create and visualize like a pro</span>
+            </li>
+        </ul>
+        <p class="ms-font-l">Modify the source files, then click <b>Run</b>.</p>
+        <div role="button" id="run" class="ms-welcome__action ms-Button ms-Button--hero ms-font-xl">
+            <span class="ms-Button-label">Run</span>
+        </div>
+        <p><label id="item-subject"></label></p>
+        -->
+
+    </main>
+</body>
+
+</html>

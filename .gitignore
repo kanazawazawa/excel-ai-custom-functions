@@ -1,11 +1,14 @@
-# Ignore all files and directories
-*
+node_modules/
+.vscode/
+assets/
+dist/
 
-# Except README.md and manifest.xml
-!README.md
-!manifest.xml
-!.gitignore
-
-# Except the src directory
-!src/
-!images/
+.eslintrc.json
+babel.config.json
+code_of_conduct.md
+manifest*
+package-lock.json
+package.json
+SUPPORT.md
+tsconfig.json
+webpack.config.js
