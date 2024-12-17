@@ -67,7 +67,7 @@ AOAI.AI 関数を使用することができる。
 ![9](images/9.png)
 
 ### Step 11: Remove the Sideloaded Add-in
-利用終了後、サイドロードされたアドインを削除する場合はこちらを参考にしてください。  
+利用終了後、サイドロードされたアドインを削除する場合は  
 [こちら](https://learn.microsoft.com/ja-jp/office/dev/add-ins/testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins#remove-a-sideloaded-add-in)を参考にしてください。
 
 ## Reference
