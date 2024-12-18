@@ -1,4 +1,6 @@
-# EXCEL カスタム関数でAI実行デモ
+# Office アドイン プラットフォーム を使用した EXCEL カスタム関数でAI実行デモ
+
+[Office アドイン プラットフォームとは](https://learn.microsoft.com/ja-jp/office/dev/add-ins/overview/office-add-ins)
 
 デモ用に作成した EXCEL カスタム関数です。  
 本番環境のご利用はお控えください。  
